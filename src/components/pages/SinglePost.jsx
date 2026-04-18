@@ -3,6 +3,7 @@ import Images from '../Images'
 import { Link } from 'react-router-dom'
 import PostMenuActions from '../PostMenuActions'
 import Search from '../Search'
+import Comments from '../Comments'
 
 function SinglePost() {
   return (
@@ -93,7 +94,7 @@ function SinglePost() {
             Let’s build the future together, one line of code at a time.
           </p>
         </div>
-
+         <Comments />
       </div>
 
       {/* RIGHT: AUTHOR */}
@@ -133,10 +134,10 @@ function SinglePost() {
           <Link to="" className='underline'>Search Engine</Link>
         </div>
         <h1 className='mt-8 mb-4 text-sm font-medium'>Search</h1>
-        <Search />
+        <Search />  
       </div>
-
     </div>
+    
   )
 }
 

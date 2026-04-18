@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+
 function MainCategory() {
   return (
     <div className='hidden md:flex bg-white rounded-3xl xl:rounded-full p-4 shadow-lg items-center justify-center gap-8 '>

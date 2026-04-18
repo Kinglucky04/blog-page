@@ -35,7 +35,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/write" element={<Write />} />
-          <Route path="/post/:id" element={<SinglePost />} />
+          <Route path="/single-post" element={<SinglePost />} />
         </Routes>
     </div>  
     </>

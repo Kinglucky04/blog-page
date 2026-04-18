@@ -7,3 +7,10 @@ body{
     font-family: "montserrat", sans-serif;
     color: white;
 }
+
+.ql-container{
+    border: none !important;
+}
+.ql-toolbar{
+    border: none !important;
+}

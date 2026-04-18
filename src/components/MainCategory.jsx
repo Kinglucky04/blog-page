@@ -12,7 +12,7 @@ function MainCategory() {
       </div>
 
       <div className=' text-black text-4xl font-medium'>|</div>
-      <div className='bg-gray-400 -2 rounded-full flex items-center gap-2 '>
+      <div className='bg-gray-200 p-2 rounded-full flex items-center gap-2 text-gray-600'>
           <svg
               width="24"
               height="24"
@@ -26,7 +26,7 @@ function MainCategory() {
               <circle cx="11" cy="11" r="7" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <input type="text" placeholder="Search a post" className='bg-transparent border-none focus:outline-none' />
+          <input type="text" placeholder="Search a post" className='bg-transparent border-none focus:outline-none ' />
       </div>
     </div>
   )

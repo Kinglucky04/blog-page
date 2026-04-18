@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import MainCategory from '../MainCategory';
+import FeaturedPost from '../FeaturedPost';
+import PostList from '../PostList';
+
 function HomePage() {
   return (
     <div className='mt-4 flex flex-col gap-4'>
@@ -63,6 +66,14 @@ function HomePage() {
         </div>
 
         <MainCategory />
+        <FeaturedPost />
+
+        <div className=''>
+            <h1 className='my-8 text-2xl text-gray-400'>
+                Recent Post
+            </h1>
+            <PostList />
+        </div>
     </div>
   )
 }

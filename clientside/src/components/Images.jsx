@@ -2,24 +2,15 @@ import React from 'react'
 import { Image } from '@imagekit/react';
 
 
-function Images({ src, className, alt, w, h }) {
+function Images({ src, className, alt }) {
   return (
-    <Image 
-      urlEndpoint={import.meta.env.VITE_IMAGEKIT_URLENDPOINT} 
+    <img 
       src={src} 
-      alt={alt}
+      alt={alt} 
       className={className}
       loading="lazy"
-      lqip={{ active: true , quality: 20}}
-      width={w}
-      height={h}
-      transformation={[{
-        width: w,
-        height: h,
-      },
-    ]}
     />
-  )
+  );
 }
 
 export default Images

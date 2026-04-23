@@ -28,7 +28,7 @@ function HomePage() {
                 width="120"
                 height="120"
                 viewBox="0 0 120 120"
-                //className="animate-[spin_10s_linear_infinite]"
+                className="animate-[spin_10s_linear_infinite]"
             >
                 <defs>
                 <path

@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 function SideMenu() {
   return (
     <div className='px-4 h-max sticky top-8'>
-      <h1 className='mb-4 text-sm font-medium'>Search</h1>
-      <Search />
       <h1 className='mt-4 mb-4 text-sm font-medium'>Filters</h1>
       <div className='flex flex-col gap-4 text-sm mb-4'>
         <label htmlFor="" className='flex items-center gap-2 cursor-pointer'>

@@ -35,7 +35,8 @@ function Write() {
         desc,
         category,
         image,
-        authorEmail: "test@example.com"
+        authorEmail: "test@example.com",
+        createdAt: new Date().toISOString(),
       };
 
       const updatedPosts = [newPost, ...posts];

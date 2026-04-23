@@ -33,13 +33,13 @@ function SinglePost() {
   });
 
   localStorage.setItem("history", JSON.stringify(history));
-}, [post]);
+  }, [post]);
 
  if (!post) {
           return <div>Post not found</div>;
         }
 
-const handleDeletePost = () => {
+  const handleDeletePost = () => {
   const confirmDelete = window.confirm("Delete this post?");
 
   if (!confirmDelete) return;
@@ -52,6 +52,24 @@ const handleDeletePost = () => {
 
   navigate("/");
 };
+
+    {/* formatting time */}
+      const formatTimeAgo = (dateString) => {
+      if (!dateString) return "Just now";
+
+      const now = new Date();
+      const past = new Date(dateString);
+      const diffInSeconds = Math.floor((now - past) / 1000);
+
+      const minutes = Math.floor(diffInSeconds / 60);
+      const hours = Math.floor(diffInSeconds / 3600);
+      const days = Math.floor(diffInSeconds / 86400);
+
+      if (diffInSeconds < 60) return "Just now";
+      if (minutes < 60) return `${minutes} min ago`;
+      if (hours < 24) return `${hours} hrs ago`;
+      return `${days} days ago`;
+    };
 
   return (
     <div className='flex flex-col lg:flex-row gap-8'>
@@ -66,7 +84,7 @@ const handleDeletePost = () => {
           <Link to="/test" className='text-blue-400'>{post.authorEmail}</Link>
           <span>On</span>
           <Link to="/test" className='text-blue-400'>{post.category}</Link>
-          <span>2 days ago</span>
+          <span>{formatTimeAgo(post.createdAt)}</span>
         </div>
 
         <Images 
@@ -79,7 +97,10 @@ const handleDeletePost = () => {
 
         <div className='lg:text-lg flex flex-col gap-6 text-justify'>
 
-          <p className="whitespace-pre-line">{post.content}</p>
+       <div
+          className="lg:text-lg flex flex-col gap-6 text-justify"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
         </div>
          <Comments postId={post.id} />
       </div>
@@ -120,8 +141,6 @@ const handleDeletePost = () => {
           <Link to="/posts?cat=database" className='underline'>Database</Link>
           <Link to="/posts?cat=search-engine" className='underline'>Search Engine</Link>
         </div>
-        <h1 className='mt-8 mb-4 text-sm font-medium'>Search</h1>
-        <Search />  
       </div>
     </div>
     

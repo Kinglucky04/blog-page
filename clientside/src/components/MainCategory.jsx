@@ -1,7 +1,13 @@
 import React from 'react'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function MainCategory() {
+
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
   return (
     <div className='hidden md:flex bg-white rounded-3xl xl:rounded-full p-4 shadow-lg items-center justify-center gap-8 '>
       <div className=' flex-1 flex items-center justify-between flex-wrap'>
@@ -27,7 +33,18 @@ function MainCategory() {
               <circle cx="11" cy="11" r="7" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <input type="text" placeholder="Search a post" className='bg-transparent border-none focus:outline-none ' />
+          <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search a post"
+              className='bg-transparent border-none focus:outline-none'
+              onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      navigate(`/posts?search=${query}`);
+                    }
+                  }}
+            />
       </div>
     </div>
   )

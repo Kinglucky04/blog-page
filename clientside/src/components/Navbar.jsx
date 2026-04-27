@@ -12,8 +12,8 @@ function Navbar() {
   return (
     <div className='w-full h-16 md:h-20 flex items-center justify-between '>
       <Link to="/" className='flex items-center gap-2 font-bold text-lg md:text-2xl'>
-        <Images src="/blockforge-logo.png" className="w-8 h-8" alt="blockforge-logo" />
-        <span>Blockforge </span>
+        <Images src="../../public/images/blockforge-logo.png" className="w-8 h-8" alt="blockforge-logo" />
+        <span className='text-green-400 font-bold uppercase text-xl'>Blockforge </span>
       </Link>
 
       {/* Mobile Menu */}

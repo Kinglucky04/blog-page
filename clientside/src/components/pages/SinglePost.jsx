@@ -124,10 +124,10 @@ function SinglePost() {
 
              <div className='flex gap-4 mt-4'>
             <Link to="https://www.facebook.com/login/" target='blank'>
-              <Images src="/facebook.png" alt="twitter" className="w-5 h-5 object-cover" w="20" h="20"/>
+              <Images src="../../public/images/facebook.png" alt="twitter" className="w-5 h-5 object-cover" w="20" h="20"/>
             </Link>
             <Link to="https://www.instagram.com/accounts/login/" target='blank'>
-              <Images src="/instagram.jpeg" alt="linkedin" className="w-5 h-5 object-cover" w="20" h="20"/>
+              <Images src="../../public/images/instagram.jpeg" alt="linkedin" className="w-5 h-5 object-cover" w="20" h="20"/>
             </Link>
           </div>
           </div>

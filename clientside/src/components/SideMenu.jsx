@@ -16,7 +16,7 @@ function SideMenu() {
         </label>
         <label htmlFor="" className='flex items-center gap-2 cursor-pointer'>
             <input type="radio" name='sort' value='trending' className='appearance-none w-4 h-4 border-[1.5px] border-blue-500 rounded-sm bg-white checked:bg-blue-700' />
-            Trending bg-white
+            Trending
         </label>
         <label htmlFor="" className='flex items-center gap-2 cursor-pointer'>
             <input type="radio" name='sort' value='oldest' className='appearance-none w-4 h-4 border-[1.5px] border-blue-500 rounded-sm bg-white checked:bg-blue-700' />

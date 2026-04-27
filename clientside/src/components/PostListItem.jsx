@@ -22,9 +22,10 @@ function PostListItem({post}) {
           <Link className='text-blue-400'>{post.category}</Link>
           <span>2 hours ago</span>
         </div>
-        <p>
-            {post.content.replace(/<[^>]+>/g, "").slice(0, 150)}
-          </p>
+       <div
+            className="prose lg:prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         <Link to={`/post/${post.id}`} className='underline text-sm text-blue-400'>Read More</Link>
       </div>
     </div>

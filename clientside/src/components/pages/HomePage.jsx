@@ -45,22 +45,8 @@ function HomePage() {
             </svg>
 
             {/* Button inside the circle */}
-            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-[#00A8FF] hover:scale-110 transition-all duration-300 cursor-pointer border-none">
-                <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="#2D2F36"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-                </svg>
+            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-[#00A8FF] hover:scale-110 transition-all duration-300 cursor-pointer border-none">
+                <span className='text-sm text-gray-700 font-semibold'>Post</span>
             </button>
             </Link>
         </div>

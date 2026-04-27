@@ -9,17 +9,17 @@ function MainCategory() {
   const navigate = useNavigate();
 
   return (
-    <div className='hidden md:flex bg-white rounded-3xl xl:rounded-full p-4 shadow-lg items-center justify-center gap-8 '>
-      <div className=' flex-1 flex items-center justify-between flex-wrap'>
-         <Link to="/posts" className='text-white bg-blue-500 rounded-full px-4 py-2'>All Post</Link>
-          <Link to="/posts?cat=web-design" className='text-gray-700 rounded-full px-4 py-2'>Web Design</Link>
-           <Link to="/posts?cat=development" className='text-gray-700 rounded-full px-4 py-2'>Development</Link>
-            <Link to="/posts?cat=database" className='text-gray-700 rounded-full px-4 py-2'>DataBase</Link>
-             <Link to="/posts?cat=search-engine" className='text-gray-700 rounded-full px-4 py-2'>Search Engine</Link>
+    <div className='hidden md:flex bg-white rounded-3xl xl:rounded-full p-2 shadow-lg items-center justify-center gap-8 '>
+      <div className='flex w-1/2 items-center justify-around flex-wrap'>
+         <Link to="/posts" className='text-white bg-blue-500 rounded-full px-2 py-1'>All Post</Link>
+          <Link to="/posts?cat=web-design" className='text-gray-700 rounded-full px-2 py1'>Web Design</Link>
+           <Link to="/posts?cat=development" className='text-gray-700 rounded-full px-2 py-1'>Development</Link>
+            <Link to="/posts?cat=database" className='text-gray-700 rounded-full px-2 py-1'>DataBase</Link>
+             <Link to="/posts?cat=search-engine" className='text-gray-700 rounded-full px-2 py-1'>Search Engine</Link>
       </div>
 
       <div className=' text-black text-4xl font-medium'>|</div>
-      <div className='bg-gray-200 p-2 rounded-full flex items-center gap-2 text-gray-600'>
+      <div className='bg-gray-200 p-1 rounded-full flex items-center gap-2 text-gray-600 w-1/2'>
           <svg
               width="24"
               height="24"
@@ -38,7 +38,7 @@ function MainCategory() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search a post"
-              className='bg-transparent border-none focus:outline-none'
+              className='bg-transparent border-none focus:outline-none text-sm w-full'
               onKeyDown={(e) => {
                     if (e.key === "Enter") {
                       navigate(`/posts?search=${query}`);

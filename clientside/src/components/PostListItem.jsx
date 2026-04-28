@@ -23,7 +23,7 @@ function PostListItem({post}) {
           <span>2 hours ago</span>
         </div>
        <div
-            className="prose lg:prose-lg max-w-none"
+            className="prose lg:prose-lg max-w-none line-clamp-2 overflow-hidden"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         <Link to={`/post/${post.id}`} className='underline text-sm text-blue-400'>Read More</Link>

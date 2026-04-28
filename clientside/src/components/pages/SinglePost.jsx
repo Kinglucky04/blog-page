@@ -75,11 +75,11 @@ function SinglePost() {
     <div className='flex flex-col lg:flex-row gap-8'>
       
       {/* LEFT: POST */}
-      <div className='lg:w-[70%] flex flex-col gap-8'>
+      <div className='lg:w-[70%] flex flex-col gap-8 min-w-0'>
         
         <h1 className='font-semibold uppercase'>{post.title}</h1>
 
-        <div className='flex items-center gap-2 text-gray-400 text-sm'>
+        <div className='flex flex-col md:flex-row items-center gap-2 text-gray-400 text-sm'>
           <span>Writen by</span>
           <Link to="/test" className='text-blue-400'>{post.authorEmail}</Link>
           <span>On</span>
@@ -90,23 +90,21 @@ function SinglePost() {
         <Images 
           src={post.image} 
           alt="blockforge" 
-          className="rounded-2xl w-full object-cover h-150"
+          className="rounded-2xl w-full object-cover h-[400px]"
           w="600"
         />
         
-
         <div className='lg:text-lg flex flex-col gap-6 text-justify'>
-
        <div
-          className="lg:text-lg flex flex-col gap-6 text-justify"
+          className="lg:text-lg flex flex-col gap-6 text-justify break-word overflow-hidden"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         </div>
          <Comments postId={post.id} />
-      </div>
+        </div>
 
       {/* RIGHT: AUTHOR */}
-      <div className='lg:w-[30%] sticky top-8 h-max self-start px-4'>
+     <div className=' hidden md:block lg:w-[30%] sticky top-8 h-max self-start px-4 shrink-0'>
         
         <h1 className='mb-4 text-sm font-medium'>{post.authorEmail}</h1>
 
@@ -124,10 +122,10 @@ function SinglePost() {
 
              <div className='flex gap-4 mt-4'>
             <Link to="https://www.facebook.com/login/" target='blank'>
-              <Images src="../../public/images/facebook.png" alt="twitter" className="w-5 h-5 object-cover" w="20" h="20"/>
+              <Images src="/images/facebook.png" alt="twitter" className="w-5 h-5 object-cover" w="20" h="20"/>
             </Link>
             <Link to="https://www.instagram.com/accounts/login/" target='blank'>
-              <Images src="../../public/images/instagram.jpeg" alt="linkedin" className="w-5 h-5 object-cover" w="20" h="20"/>
+              <Images src="/images/instagram.jpeg" alt="linkedin" className="w-5 h-5 object-cover" w="20" h="20"/>
             </Link>
           </div>
           </div>

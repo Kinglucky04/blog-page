@@ -1,16 +1,39 @@
-# React + Vite
+BlockForge Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern blog platform built with React + Vite + Tailwind CSS, featuring rich text editing, categories and user authentication via Clerk.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Overview
 
-## React Compiler
+BlockForge is a lightweight blogging system where users can:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create and publish blog posts
+Upload images 
+Browse posts by category
+View full articles on a dedicated post page
+Manage posts (delete functionality)
+All data is stored locally using localStorage (no backend required).
 
-## Expanding the ESLint configuration
+Tech Stack
+ React (Vite)
+ Tailwind CSS
+ Clerk Authentication
+ React Quill (rich text editor)
+ LocalStorage (data persistence)
+ React Router DOM
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Post Management
+View all posts on homepage
+Click “Read More” to open full article
+Delete posts (with confirmation)
+
+Installation & Setup
+1. Clone the repository
+git clone https://github.com/your-username/blockforge-blog.git
+cd blockforge-blog
+
+2. Install dependencies
+npm install
+
+4. Run the development server
+npm run dev
